@@ -1,7 +1,5 @@
 ---
-title: "Baseball"
+title: "Baseball Through the Numbers"
 ---
 
-This is a Quarto website.
-
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+Welcome! This site explores the history of Major League Baseball through its data, using the Lahman database. Discover the players, teams, and trends that have helped shape the game.

@@ -2,8 +2,15 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Baseball",
+    "title": "Baseball Through the Numbers",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+    "text": "Welcome! This site explores the history of Major League Baseball through its data, using the Lahman database. Discover the players, teams, and trends that have helped shape the game."
+  },
+  {
+    "objectID": "home-runs.html",
+    "href": "home-runs.html",
+    "title": "Home runs",
+    "section": "",
+    "text": "Warning: Removed 1 row containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSeason\nTotal home runs\nTotal team-games\nHome runs per game\n\n\n\n\n1981\n1781\n2788\n0.64\n\n\n1994\n3306\n3200\n1.03\n\n\n2019\n6776\n4858\n1.39\n\n\n2020\n2304\n1796\n1.28"
   }
 ]
