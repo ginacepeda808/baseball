@@ -1,0 +1,16 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Baseball Through the Numbers",
+    "section": "",
+    "text": "This site uses the Lahman database to explore home runs in Major League Baseball. The league’s home-run rate per team-game varies across seasons and reaches its highest point in 2019 in the data shown.\nCareer totals tell a different story: Barry Bonds leads the all-time list with 762 home runs, ahead of Hank Aaron and Babe Ruth. Use the analysis pages in the navbar to explore season rates, career leaders, and Bonds’ home runs season by season."
+  },
+  {
+    "objectID": "home-runs.html",
+    "href": "home-runs.html",
+    "title": "Home runs",
+    "section": "",
+    "text": "Warning: Removed 1 row containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSeason\nTotal home runs\nTotal team-games\nHome runs per game\n\n\n\n\n1981\n1781\n2788\n0.64\n\n\n1994\n3306\n3200\n1.03\n\n\n2019\n6776\n4858\n1.39\n\n\n2020\n2304\n1796\n1.28"
+  }
+]
