@@ -1,0 +1,73 @@
+---
+title: "Sluggers"
+---
+
+```{r}
+#| message: false
+library(tidyverse)
+library(Lahman)
+```
+
+```{r}
+top_sluggers <- Batting |>
+  group_by(playerID) |>
+  summarize(
+    career_home_runs = sum(HR, na.rm = TRUE),
+    first_season = min(yearID),
+    last_season = max(yearID),
+    .groups = "drop"
+  ) |>
+  left_join(
+    People |> select(playerID, nameFirst, nameLast),
+    by = "playerID"
+  ) |>
+  mutate(
+    player = str_c(nameFirst, nameLast, sep = " "),
+    active_steroid_era = if_else(
+      last_season >= 1994 & first_season <= 2009,
+      "Yes",
+      "No"
+    )
+  ) |>
+  arrange(desc(career_home_runs)) |>
+  slice_head(n = 15)
+```
+
+```{r}
+ggplot(
+  top_sluggers,
+  aes(
+    x = career_home_runs,
+    y = reorder(player, career_home_runs),
+    fill = active_steroid_era
+  )
+) +
+  geom_col() +
+  scale_fill_manual(
+    name = "Active during\nsteroid era",
+    values = c("No" = "#767676", "Yes" = "#D55E00")
+  ) +
+  labs(
+    title = "Career Home Runs: Top 15 Sluggers",
+    x = "Career home runs",
+    y = "Player",
+    caption = "Source: Lahman database. Active means a career overlapped 1994-2009."
+  )
+```
+
+```{r}
+Batting |>
+  filter(playerID == "bondba01") |>
+  group_by(yearID) |>
+  summarize(
+    season_home_runs = sum(HR, na.rm = TRUE),
+    .groups = "drop"
+  ) |>
+  ggplot(aes(x = yearID, y = season_home_runs)) +
+  geom_col() +
+  labs(
+    title = "Barry Bonds' Home Runs by Season",
+    x = "Season",
+    y = "Home runs"
+  )
+```
